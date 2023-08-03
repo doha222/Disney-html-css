@@ -1,0 +1,427 @@
+/* start variables  */
+:root {
+    --main-color: #d9d9d9;
+    --second-color: #ff4646;
+}
+
+/* end variables  */
+/* start global rules  */
+body {}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Small  */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium  */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large  */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end global rules  */
+
+/* start component  */
+.special-heading {
+    margin: 0;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+}
+
+.special-heading+p {
+    align-items: center;
+    color: white;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.special-heading+p+p {
+    align-items: center;
+    color: white;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/* end component  */
+
+/* start header  */
+.header {
+
+    /* background-image: url(../images/miki.jpg); */
+}
+
+.header .container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    width: 100px;
+}
+
+.header .container .links ul {
+    list-style: none;
+}
+
+.header .container .links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.header .container .links a {
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    color: black;
+    font-weight: 400px;
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.header .container .links a:hover {
+    color: var(--second-color);
+    font-size: 25px;
+}
+
+/* end header  */
+
+/* start landing */
+.landing {
+
+    background-image: url(../images/background1.jpg);
+    background-size: cover;
+    height: 500px;
+    background-position: center center;
+    position: relative;
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(240, 78, 78, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.landing .intro-text {
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* end landing  */
+/* start our work   */
+
+.work {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--second-color);
+}
+
+.work .work-content {
+
+    /* display: grid;
+    grid-template-columns: repeat(autofill,minmax(300px,1fr));
+    grid-gap: 20px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.work .work-content .imgs {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.work .work-content img {
+    width: 100%;
+    height: 100%;
+}
+
+.work .work-content .imgs2 {
+    width: 50%;
+}
+
+.work .work-content .imgs2 img {
+
+    padding-right: 20px;
+}
+
+/* end our work  */
+
+/* start about   */
+.about {
+    background-color: var(--main-color);
+    padding: 60px;
+}
+
+/* end about  */
+
+/* start services  */
+
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ff4646;
+}
+
+.services .services-content {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+}
+
+.services .services-content .card {
+    text-align: center;
+    /* align-items: center; */
+}
+
+.services .services-content .card img {
+    width: 100%;
+
+}
+
+.services .services-content .card:not(:last-child) img {
+    height: 467px;
+}
+
+.services .services-content .card .card-info {
+    padding: 15px;
+}
+
+.services .services-content .card .card-info h2 {
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+}
+
+.services .services-content .card .card-info p {
+    margin-top: 15px;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.services .services-content .card button {
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 35%;
+    color: var(--second-color);
+    transition: 0.4s;
+    box-shadow: none;
+}
+
+.services .services-content .card button:hover {
+    width: 130px;
+    height: 60px;
+    font-size: 22px;
+    padding: 15px;
+    color: white;
+    background-color: var(--second-color);
+    border-color: white;
+    box-shadow: none;
+
+}
+
+/* end services */
+
+/* start information  */
+
+.information {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--main-color);
+    text-align: center;
+    align-items: center;
+}
+
+.information .text p {
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.information .text span {
+
+    color: white;
+    font-size: 40px;
+}
+
+/* end information */
+
+/* start contact  */
+
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--second-color);
+}
+
+.contact .container {
+    display: flex;
+
+}
+
+.contact .inputs,
+.contact .conText {
+    width: 50%;
+
+}
+
+.contact .inputs label {
+    font-size: 20px;
+    margin-right: 10px;
+
+
+}
+
+.contact .inputs input {
+    height: 35px;
+    width: 250px;
+    border-radius: 10%;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background-color: var(--main-color);
+
+}
+
+.contact .inputs .lst {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .inputs .lst input {
+    width: 500px;
+    margin-top: 10px;
+    height: 250px;
+}
+
+.contact .inputs button {
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 35%;
+    color: var(--second-color);
+    transition: 0.4s;
+    box-shadow: none;
+
+}
+
+.contact .inputs button:hover {
+    width: 90px;
+    height: 60px;
+    font-size: 22px;
+    padding: 15px;
+    color: white;
+    background-color: var(--second-color);
+    border-color: white;
+    box-shadow: none;
+
+
+}
+
+.contact .conText {
+    text-align: center;
+}
+
+.contact .conText h1 {
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+}
+
+.contact .conText p {
+    align-items: center;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+
+}
+
+.contact .conText i {
+    margin-right: 20px;
+    font-size: 50px;
+}
+
+/* end contact */
+
+/* start footer  */
+.footer {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+/* end footer  */
